@@ -7,7 +7,7 @@
         <IsWin>false</IsWin>
         <IsAndroid>false</IsAndroid>
         <IsIOS>false</IsIOS>
-        <IsWasm>false</IsWasm>
+        <IsNet>false</IsNet>
     </PropertyGroup>
     
     <Choose>
@@ -47,12 +47,12 @@
                 <ProjectCapability Include="MauiCore" />
             </ItemGroup>
         </When>
-        <When Condition="!$(TargetFramework.Contains('-'))">
+        <Otherwise>
             <PropertyGroup>
-                <IsWasm>true</IsWasm>
-                <DefineConstants>$(DefineConstants);WASM;ENABLECURSOR</DefineConstants>
+                <IsNet>true</IsNet>
+                <DefineConstants>$(DefineConstants);NET;ENABLECURSOR</DefineConstants>
             </PropertyGroup>
-        </When>
+        </Otherwise>
     </Choose>
 
     <Choose>
@@ -80,7 +80,7 @@
         </When>
         <Otherwise>
             <ItemGroup>
-                <PackageReference Include="Uno.WinUI" Version="5.0.48" PrivateAssets="none" />
+                <PackageReference Include="Uno.WinUI" Version="5.0.118" PrivateAssets="none" />
             </ItemGroup>
 
             <!-- WindowsAppSDK已内置，uno需要，否则xaml文件无法编译 -->

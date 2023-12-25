@@ -9055,7 +9055,7 @@ namespace Dt.Base
                 {
                     var scrollBar = new ScrollBar();
                     scrollBar.Orientation = (Orientation)1;
-#if WIN || WASM
+#if WIN || NET
                     scrollBar.IndicatorMode = ScrollingIndicatorMode.MouseIndicator;
 #else
                     scrollBar.IndicatorMode = ScrollingIndicatorMode.TouchIndicator;
@@ -9119,7 +9119,7 @@ namespace Dt.Base
                     {
                         var scrollBar = new ScrollBar();
                         scrollBar.Orientation = (Orientation)0;
-#if WIN || WASM
+#if WIN || NET
                         scrollBar.IndicatorMode = ScrollingIndicatorMode.MouseIndicator;
 #else
                         scrollBar.IndicatorMode = ScrollingIndicatorMode.TouchIndicator;

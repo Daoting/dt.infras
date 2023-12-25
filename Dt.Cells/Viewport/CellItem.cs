@@ -205,7 +205,7 @@ namespace Dt.Cells.UI
             }
             SynStrikethroughView();
 
-#if WIN || WASM
+#if WIN || NET
             // 手机上体验不好
             if (!excel.IsTouching)
             {
