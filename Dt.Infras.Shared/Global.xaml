@@ -10,6 +10,6 @@
         <Setter Property="FontFamily" Value="Microsoft YaHei UI"/>
     </skia:Style>
     <skia:Style TargetType="Button">
-        <Setter Property="FontFamily" Value="Microsoft YaHei UI"></Setter>
+        <Setter Property="FontFamily" Value="Microsoft YaHei UI" />
     </skia:Style>
 </ResourceDictionary>
